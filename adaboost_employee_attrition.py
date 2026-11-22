@@ -225,7 +225,7 @@ kolom_ringkas = [
     if col in hasil_risiko.columns
 ] + ["Probabilitas_Attrition", "Aktual_Attrition"]
 
-top_risiko = hasil_risiko.sort_values(by="Probabilitas_Attrition", ascending=False).head(10)
+top_risiko = hasil_risiko.sort_values(by="Probabilitas_Attrition", ascending=False).head(5)
 print("\n=== 6. TOP 5 KARYAWAN BERISIKO TINGGI (TEST SET) ===")
 print(top_risiko[kolom_ringkas].to_string(index=False, float_format=lambda v: f"{v:.4f}"))
 
